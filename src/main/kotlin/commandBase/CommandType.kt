@@ -10,3 +10,6 @@ annotation class GroupCommand
 
 @Target(AnnotationTarget.CLASS)
 annotation class PrivateCommand
+
+@Target(AnnotationTarget.CLASS)
+annotation class EverywhereCommand

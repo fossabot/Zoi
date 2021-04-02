@@ -17,7 +17,10 @@ class CommandManagerImp : CommandManager {
     override fun regCommandUnit(vararg Object: CommandUnit) {
         for (command in Object)
         {
-            commandUnits[command.name] = command
+            for (name in command.name)
+            {
+                commandUnits[name] = command
+            }
         }
     }
 
