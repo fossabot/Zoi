@@ -31,19 +31,13 @@ class Filter {
         if (commandPrefix.contains(message.content[0]))
         {
             val rowName = message.content.split(" ")[0]
-            println(rowName)
             val name = rowName.substring(1 until rowName.length)
-            println(name)
             if (commandUnits.containsKey(name) && commandUnits[name] != null
                 && (commandUnits[name]!!.javaClass.getAnnotation(GroupCommand::class.java) != null)
             )
             {
                 CommandHandler().groupCommandRunner(commandUnits[name]!!,event)
             }
-        }
-        else
-        {
-            //不是指令
         }
     }
 }
