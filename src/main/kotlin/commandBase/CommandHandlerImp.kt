@@ -5,6 +5,7 @@ import net.mamoe.mirai.event.events.GroupMessageEvent
 
 class CommandHandler {
     suspend fun groupCommandRunner(Command: CommandUnit, event: GroupMessageEvent) {
-        Command.commandResponse(event)
+        val message = Command.commandResponse(event)
+        event.subject.sendMessage(message)
     }
 }
