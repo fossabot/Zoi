@@ -3,6 +3,10 @@ package sender
 import exceptions.NullGroupException
 import net.mamoe.mirai.message.data.Message
 
+/**
+ * 在事件外发送消息
+ */
+
 class MessageSender {
     suspend fun sendGroupMessage(groupId: Long, message: Message)
     {
